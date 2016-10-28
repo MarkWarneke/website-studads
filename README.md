@@ -1,5 +1,5 @@
 # StudAds
-> [StudAds](http://www.studads.de) Webseite der neuen studentischen Marketingagentur aus Münster 
+> [StudAds](http://www.studads.de) Webseite der neuen studentischen Marketing Agentur aus Münster 
 
 Installation: https://github.com/yeoman/generator-webapp
 
