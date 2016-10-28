@@ -3,7 +3,11 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "jquery": "^3.1.1",
+    "jquery.poptrox": "^2.5.0",
+    "skel": "^3.0.1",
+    "fontawesome": "~4.0.3" 
   },
   "overrides": {
     "bootstrap-sass": {
@@ -12,7 +16,16 @@
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
       ]
-    }
+    },
+    "fontawesome": {
+          "main": [
+              "css/font-awesome.css",
+              "fonts/fontawesome-webfont.eot",
+              "fonts/fontawesome-webfont.woff",
+              "fonts/fontawesome-webfont.ttf",
+              "fonts/fontawesome-webfont.svg"
+          ]
+      }
   },
   "devDependencies": {
     "chai": "^3.5.0",
