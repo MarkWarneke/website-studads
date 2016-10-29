@@ -18,9 +18,7 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+
     <!--[if lte IE 8]><script src="scripts/ie/html5shiv.js"></script><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="styles/ie8.css" /><![endif]-->
 </head>
@@ -32,7 +30,8 @@
     <!-- Header -->
     <header id="header">
         <div class="inner">
-            <a href="#" class="image avatar"><img src="images/logo.jpg" alt="" /></a>
+
+            <a href="#" class="image avatar logo""><img src="images/logo.png" class="" alt="Das StudAds Logo" /></a>
             <h1><strong>StudAds</strong>, Marketing von Studenten</h1>
         </div>
     </header>
@@ -262,6 +261,11 @@
     ga('create', 'UA-86409679-1');
     ga('send', 'pageview');
     </script>
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script async src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>

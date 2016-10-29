@@ -198,6 +198,36 @@
 		text-align: right;
 	}
 
+
+
+	.logo {
+		transform-style: preserve-3d;
+
+	    /* flip the pane when hovered */
+	    &:hover, 
+	    &.hover, 
+	    &.focus, 
+	    &:focus {
+		    animation: coin 2s infinite alternate;
+		    transform: perspective(400px) rotateY(0deg);
+
+		    //animation: raise 1s infinite alternate;
+    		//transform: scale(1);
+	    }
+
+		@keyframes coin{
+			from{transform:perspective(400px) rotateY(0deg)}
+			to{transform:perspective(400px) rotateY(360deg)}
+		}
+
+		@keyframes raise{
+			from{transform:scale(1)}
+			to{transform:scale(2)}
+		}
+	   
+	}
+
+
 /* Section/Article */
 
 	section, article {
