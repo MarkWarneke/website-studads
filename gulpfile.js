@@ -7,6 +7,18 @@ const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
 var ghPages = require('gulp-gh-pages');
 const imagemin = require('gulp-imagemin');
+var gutil = require('gulp-util');
+var ftp = require( 'vinyl-ftp' );
+var fs = fs = require('fs');
+
+var conf = JSON.parse(fs.readFileSync('./ftp.conf'));
+
+/** Configuration **/
+var user = conf.user;
+var password = conf.sec;  
+var host = conf.host;  
+var port = conf.port;    
+var remoteFolder = conf.remoteFolder;
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -177,3 +189,34 @@ gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
+
+// helper function to build an FTP connection based on our configuration
+function getFtpConnection() {  
+    return ftp.create({
+        host: host,
+        port: port,
+        user: user,
+        password: password,
+        parallel: 5,
+        log: gutil.log
+    });
+}
+
+gulp.task( 'ftp', function () {
+
+  console.log(user, host, port, remoteFolder);
+
+  var conn = getFtpConnection();
+
+    var globs = [
+        'dist/**/*'
+    ];
+
+    // using base = '.' will transfer everything to /public_html correctly
+    // turn off buffering in gulp.src for best performance
+
+    return gulp.src( globs, { base: '.', buffer: false } )
+        .pipe( conn.newer( '/studads' ) ) // only upload newer files
+        .pipe( conn.dest( '/studads' ) );
+
+} );
