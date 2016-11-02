@@ -209,13 +209,13 @@ gulp.task( 'ftp', function () {
   var conn = getFtpConnection();
 
     var globs = [
-        'dist/**/*'
+        'dist/**'
     ];
 
     // using base = '.' will transfer everything to /public_html correctly
     // turn off buffering in gulp.src for best performance
 
-    return gulp.src( globs, { base: '.', buffer: false } )
+    return gulp.src( globs, { base: './dist', buffer: false } )
         .pipe( conn.newer( '/studads' ) ) // only upload newer files
         .pipe( conn.dest( '/studads' ) );
 
