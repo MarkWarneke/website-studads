@@ -116,7 +116,8 @@ gulp.task('serve', () => {
         routes: {
           '/bower_components': 'bower_components'
         }
-      }
+      }, 
+      browser: 'google chrome canary'
     });
 
     gulp.watch([
