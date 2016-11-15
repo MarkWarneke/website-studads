@@ -82,7 +82,7 @@ gulp.task('html', ['styles', 'scripts'], () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('app/images/**/*')
+  return gulp.src('app/images/**/*.{jpg,png}')
     .pipe(imagemin({
             progressive: true,
             use: [imagemin.jpegtran(), imagemin.optipng()]
