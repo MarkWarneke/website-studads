@@ -83,8 +83,10 @@ gulp.task('html', ['styles', 'scripts'], () => {
 
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
-    .pipe($.cache($.imagemin()))
-    .pipe(imagemin())
+    .pipe(imagemin({
+            progressive: true,
+            use: [imagemin.jpegtran(), imagemin.optipng()]
+        }))
     .pipe(gulp.dest('dist/images'));
 });
 
@@ -139,7 +141,8 @@ gulp.task('serve:dist', () => {
     port: 9000,
     server: {
       baseDir: ['dist']
-    }
+    },
+    browser: 'google chrome canary'
   });
 });
 
@@ -186,6 +189,7 @@ gulp.task('default', () => {
   runSequence(['clean', 'wiredep'], 'build');
 });
 
+//git subtree push --prefix dist origin gh-pages
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
