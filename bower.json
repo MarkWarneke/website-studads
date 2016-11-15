@@ -8,7 +8,9 @@
     "jquery.poptrox": "^2.5.0",
     "skel": "^3.0.1",
     "fontawesome": "~4.0.3",
-    "jquery-modal": "^0.8.0"
+    "jquery-modal": "^0.8.0",
+    "jquery-scrolly": "^0.0.1",
+    "jquery.scrollex": "^0.2.1"
   },
   "overrides": {
     "bootstrap-sass": {
