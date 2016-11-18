@@ -46,7 +46,13 @@
 
 
 .modal {
+	margin-top: 40px;
 	color: black;
+}
+
+.modal-dark {
+	max-width: none;
+	background:url(../images/overlay.png), grey;
 }
 
 .background {

@@ -80,6 +80,9 @@
                                                 <li>
                                                       <a href="#three">REFERENZEN</a>
                                                 </li>
+								<li>
+                                                      <a href="#four">BEWERBUNG</a>
+                                                </li>
                                                 <li>
                                                       <a href="#five">AGENTUR</a>
                                                 </li>
@@ -118,7 +121,7 @@
 					<div class="content">
 						<h2>WAS WIR MACHEN</h2>
 						<p>
-							Viele Studenten verfügen über das nötige Know-How, um in PR und Werbung aktiv zu werden - haben aber keinerlei Möglichkeit, diese Fähigkeiten zur Anwendung zu bringen. StudAds beschäftigt ein Netzwerk aus Studenten unterschiedlichster Fachrichtung und Qualifikation und bündelt deren Kompetenzen auf effektivste Weise. Insbesondere im digitalen Segment zeichnen sich Studenten als Digital Natives durch Innovation und Expertise aus.Für Studenten bietet StudAds einen sinnvollen Nebenjob sowie die noch fehlende Arbeitserfahrung.
+							Viele Studenten verfügen über das nötige Know-How, um in PR und Werbung aktiv zu werden - haben aber keinerlei Möglichkeit, diese Fähigkeiten zur Anwendung zu bringen. StudAds beschäftigt ein Netzwerk aus Studenten unterschiedlichster Fachrichtung und Qualifikation und bündelt deren Kompetenzen auf effektivste Weise. Insbesondere im digitalen Segment zeichnen sich Studenten als Digital Natives durch Innovation und Expertise aus. Für Studenten bietet StudAds einen sinnvollen Nebenjob sowie die noch fehlende Arbeitserfahrung.
 						</p>
 					</div>
 				</section>
@@ -214,6 +217,57 @@
 						</p>
 					</header>
 				</div>
+			</section>
+			   <section id="four" class="wrapper style2 special">
+				<div class="inner">
+					<header class="major">
+						<h2>Studenten, aufgepasst!</h2>
+						<p>
+							Keine Lust mehr zu kellnern? Keine Lust mehr, Kopien für den Chef zu machen und Kollegen Kaffee zu bringen?
+							</br>
+							Wir suchen Dich und Deine top Skills für anspruchsvolle Aufgaben, in genau dem Bereich, in dem Du arbeiten willst.
+							Du hast flexible Arbeitszeiten, wirst fair entlohnt und sammelst dabei wertvolle Erfahrungen in der Praxis.
+						</p>
+					</header>
+					<ul class="features">
+						
+						<li class="icon fa-code">
+							<a href="#modalApplication" rel="modal:open">
+								<h3>IT &amp; Webdesign</h3>
+								<p></p>
+							</a>
+						</li>
+						
+
+						<li class="icon fa-laptop">
+							<a href="#modalApplication" rel="modal:open">
+								<h3>Grafikdesign</h3>
+								<p></p>
+							</a>
+						</li>
+
+						<li class="icon fa-camera">
+							<a href="#modalApplication" rel="modal:open">
+								<h3>Fotografie &amp; Film</h3>
+								<p></p>
+							</a>
+						</li>
+
+						<li class="icon fa-comments">
+							<a href="#modalApplication" rel="modal:open">
+								<h3>Marketing &amp; Kommunikation</h3>
+								<p></p>
+							</a>
+						</li>
+						<li class="icon fa-font">
+							<a href="#modalApplication" rel="modal:open">
+								<h3>Werbetexten &amp; Übersetzung</h3>
+								<p></p>
+							</a>
+						</li>
+					</ul>
+
+				</div>	
 			</section>
             <!-- Five -->
             <section id="five" class="wrapper style2 special">
@@ -321,24 +375,74 @@
 										<option value="3">Anregungen</option>
 									</select>
 								</div>
-								</div>
-								<div class="12u$">
-									<label for="message">Nachricht</label>
-									<textarea name="message" id="message" placeholder="Nachricht" rows="4"></textarea>
-								</div>
-								<ul class="actions fit small">
-									<li>
-										<input type="hidden" name="_next" value="#thanksModal" />
-										<input type="hidden" name="_format" value="plain" />
-										<input type="text" name="_gotcha" style="display:none" />
-										<label for="submit">Senden</label>
-										<input type="submit" id="submit" value="Senden" />
-									</li>
-								</ul>
 							</div>
+							<div class="12u$">
+								<label for="message">Nachricht</label>
+								<textarea name="message" id="message" placeholder="Nachricht" rows="4"></textarea>
+							</div>
+							<ul class="actions fit small">
+								<li>
+									<input type="hidden" name="_next" value="#thanksModal" />
+									<input type="hidden" name="_format" value="plain" />
+									<input type="text" name="_gotcha" style="display:none" />
+									<label for="submit">Senden</label>
+									<input type="submit" id="submit" value="Senden" />
+								</li>
+							</ul>
+						</div>
 						</form>
 					</div>          
 				</section>
+
+<div id="modalApplication" style="display:none;" class="modal-dark">
+	<h1>Bewerbung</h1>
+
+	<form method="post" action="https://formspree.io/hr@studads.de">
+	<div class="row uniform">
+		<div class="12u">
+			<label for="name">Name*</label>
+			<input type="text" name="name" id="name" placeholder="Name" autocomplete="name" required  />
+		</div>
+		<div class="12u">
+			<label for="usrtel">Telefon</label>
+			<input type="text" name="usrtel" id="usrtel" pattern="[0-9]{10}" placeholder="Telefon" autocomplete="tel"  />
+		</div>
+		<div class="12u">
+			<label for="address">Adresse</label>
+			<input type="text" name="address" id="address" placeholder="Wohnort" autocomplete="address"  />
+		</div>
+		<div class="12u">
+			<label for="email"> E-Mail*</label>
+			<input type="email" name="email" id="email" placeholder="E-Mail" required />
+		</div>
+		<div class="12u$">
+			<div class="select-wrapper">
+				<label for="category">Bereich</label>
+				<select name="category" id="category">
+					<option value="1">IT &amp; Webdesign</option>
+					<option value="2">Grafikdesign</option>
+					<option value="3">Fotografie &amp; Film</option>
+					<option value="4">Marketing &amp; Kommunikation</option>
+					<option value="5">Werbetexte &amp; Übersetzung</option>
+				</select>
+			</div>
+		</div>
+		<div class="12u$">
+			<label for="message">Nachricht*</label>
+			<textarea name="message" id="message" placeholder="Erzähl uns kurz von Dir...was sind deine top Skills, wieso willst Du mit uns arbeiten und weshalb bist Du der Richtige oder die Richtige für uns? Wenn Du bereits Referenzen hast, zeig sie uns! (Mindestens 75 Zeichen)" rows="6" minlength="75" required></textarea>
+		</div>
+		<ul class="actions fit small">
+			<li>
+				<input type="hidden" name="_next" value="#thanksModal" />
+				<input type="hidden" name="_format" value="plain" />
+				<input type="text" name="_gotcha" style="display:none" />
+				<label for="submit">Senden</label>
+				<input type="submit" id="submit" value="Senden" />
+			</li>
+		</ul>
+	</div>
+	</form>
+</div>
 
 <!-- Modal HTML embedded directly into document -->
 <div id="modalDisclaimer" style="display:none;">
