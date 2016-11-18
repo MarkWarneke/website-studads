@@ -28,6 +28,22 @@
 
 /* Custom */
 
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s;
+}
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
 
 .modal {
 	color: black;
@@ -297,7 +313,7 @@
 	}
 
 	h2 {
-		font-size: 1.35em;
+		font-size: 2em;
 		line-height: 1.75em;
 
 		@include breakpoint(small) {
