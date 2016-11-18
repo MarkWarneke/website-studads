@@ -10,6 +10,7 @@ const imagemin = require('gulp-imagemin');
 var gutil = require('gulp-util');
 var ftp = require( 'vinyl-ftp' );
 var fs = fs = require('fs');
+var shell = require('gulp-shell');
 
 var conf = JSON.parse(fs.readFileSync('./ftp.conf'));
 
@@ -192,8 +193,18 @@ gulp.task('default', () => {
 //git subtree push --prefix dist origin gh-pages
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages())
+    .on('error', onError('gitPushHard'));
 });
+
+// Convenience handler for error-level errors.
+// execute Gulp task by name for error handling
+function onError(error) { gulp.start(error);}
+
+// Task that emits an error that's treated as an error.
+gulp.task('gitPushHard', shell.task([
+  'git subtree push --prefix dist origin gh-pages'
+]));
 
 // helper function to build an FTP connection based on our configuration
 function getFtpConnection() {  
