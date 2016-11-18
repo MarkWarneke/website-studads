@@ -27,7 +27,11 @@
 	));
 
 /* Custom */
-
+.blocker {
+	z-index: 9999;
+	overflow:auto;
+	overflow-x:hidden;
+}
 .come-in {
   transform: translateY(150px);
   animation: come-in 0.8s ease forwards;
@@ -56,11 +60,7 @@
 }
 
 .background {
-	background: url(../images/overlay.png), url(../images/background.jpg);
-    background-attachment: fixed, fixed;
-    background-position: top left, bottom center;
-    background-repeat: repeat, no-repeat;
-    background-size: cover;
+	background: url(../images/overlay.png), url(../images/background.jpg) no-repeat center center fixed;
 
 
 	header p {
@@ -152,7 +152,7 @@
 			background: rgba(0,0,0,0.01);
 			cursor: pointer;
 			height: 100%;
-			opacity: 0;
+			opacity: 1.0;
 			position: absolute;
 			top: 0;
 			width: 50%;
@@ -195,7 +195,7 @@
 			color: #fff;
 			height: 4em;
 			line-height: 4em;
-			opacity: 0;
+			opacity: 1.0;
 			position: absolute;
 			right: 0;
 			text-align: center;
@@ -1570,6 +1570,28 @@
 
 		@include breakpoint(small) {
 			padding: 3em 1.5em;
+		}
+
+		.icons {
+			bottom: 0;
+			position: fixed;
+			size: 1em;
+			padding-bottom: 10px;
+			margin: 10px;
+			font-size: 2em;
+
+			li {
+				    border-top: none;
+					padding: 5px;
+
+
+			}
+		}
+
+		li {
+			&:hover, :active{
+				color:#2e3842;
+			}
 		}
 	}
 
